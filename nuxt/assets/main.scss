@@ -1,0 +1,81 @@
+@import '_typography.scss';
+@import '_variables.scss';
+
+* {
+  box-sizing: border-box;
+
+  &:active {
+    outline: none;
+  }
+}
+
+html,
+button,
+.snipcart * {
+  @include neue;
+  font-size: 12px;
+  letter-spacing: 0.02rem;
+  
+  @include mobile {
+    font-size: 11px;
+  }
+}
+
+body,
+#__layout > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+// button reset
+button {
+	color: white;
+	border: 0;
+	padding: 0;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.grid {
+  display: grid;
+
+  @include tablet-landscape {
+    display: none;
+  }
+
+  @include tablet-portrait {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.list {
+  display: none;
+
+  @include tablet-landscape {
+    display: block;
+  }
+
+  @include tablet-portrait {
+    display: block;
+  }
+
+  @include mobile {
+    display: block;
+  }
+}
+
+// nuxt transitions
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.25s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}

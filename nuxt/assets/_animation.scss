@@ -1,0 +1,25 @@
+.fade-in {
+  animation: opacityUp 1s;
+  -webkit-animation: opacityUp 1s;
+  opacity: 1;
+  -webkit-opacity: 1;
+}
+
+.fade-out {
+  animation: opacityUp 1s;
+  -webkit-animation: opacityUp 1s;
+  opacity: 1;
+  -webkit-opacity: 1;
+  animation-direction: reverse;
+}
+
+@keyframes opacityUp {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+  }
+}
